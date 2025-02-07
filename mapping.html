@@ -87,18 +87,19 @@
 <p>•	PT000271:  PT000271_1.fastq.gz and PT000271_2.fastq.gz</p>
 <p>•	PT000279:  PT000279_1.fastq.gz and PT000279_2.fastq.gz</p>
 
-<p>Some of the programs we will use ahead can deal directly with fastq compressed files but let us decompress the PT000033 files while keeping the compressed files unchanged:</p>
-
 <pre>
-$ gzip -dc PT000033_1.fastq.gz > PT000033_1.fastq
-
-$ gzip -dc PT000033_2.fastq.gz > PT000033_2.fastq
-
 # Next, let’s copy these to the Module1 directory so that these are available for the next parts but let's change first to the Module 1 directory:
 
 $ cd ../Module1
 
 $ cp ../course_files/PT000033_*.fastq .
+
+# Some of the programs we will use ahead can deal directly with fastq compressed files but let us decompress the PT000033 files while keeping the compressed files unchanged:
+
+$ gzip -dc PT000033_1.fastq.gz > PT000033_1.fastq
+
+$ gzip -dc PT000033_2.fastq.gz > PT000033_2.fastq
+
 </pre>
 
 <p>The  -d option indicates that it is a decompressing operation and -c option redirects the output to the file we indicate after >.</p>
