@@ -78,7 +78,7 @@
 <p>
 •	Romero-Severson EO, Bulla I, Hengartner N, Bartolo I, Abecasis A, Azevedo-Pereira JM, Taveira N, Leitner T. Donor-Recipient Identification in Para- and Poly-Phyletic Trees Under Alternative HIV-1 Transmission Hypotheses Using Approximate Bayesian Computation. Genetics 2017 Nov 207(3):1089-1101 PMID: 28912340 https://doi:10.1534/genetics.117.300284 </p>
 
-<p>A multifasta file containing the PCR amplified sequences of the subjects along with several local controls and additional sequences publicly available is available under the “HIV” subdirectory of “Module5” directory. You will need to i) align the sequences; ii) edit and trim the alignment; iii) determine the most adequate model for phylogenetic reconstruction; and, iv) perform the phylogenetic reconstruction and visualize the tree.</p>
+<p>A multifasta file containing the PCR amplified sequences of the subjects along with several local controls and additional sequences publicly available is available under the “HIV” subdirectory of “Module4” directory. You will need to i) align the sequences; ii) edit and trim the alignment; iii) determine the most adequate model for phylogenetic reconstruction; and, iv) perform the phylogenetic reconstruction and visualize the tree.</p>
 
 <p>To start open Aliview (there is a shortcut in the desktop) and load the multifasta file (named HIVsequences_gag.fasta)</p>
 
@@ -98,7 +98,7 @@
 <p>We will next use IQTree to perform both phylogenetic reconstruction  and determine the best fit nucleotide substitution model to our data [5]. IQTree can do both in one single command to check multiple examples just type from the command line:</p> 
 
 <pre>
-$ cd ~/Module5
+$ cd ~/Module4
 $ iqtree
 # For more detailed instructions:
 $ iqtree -h
@@ -145,9 +145,9 @@ $ iqtree -s HIVsequences_gag_aligned.fasta -alrt 1000
 <p>Let’s get started, open a terminal window and type:</p>
 
 <pre>
-$ cd Module5
+$ cd Module4
 $conda activate snippy
-$ snippy --cpus 1 --outdir PT000033 --ref ../course_files/NC000962_3.gbk --R1 ../course_files/PT000033_1.fastq.gz --R2 ../course_files/PT000033_2.fastq.gz
+$ snippy --cpus 1 --outdir PT000033 --ref ../course_files/NC000962_3.gbk --R1 ../course_files/PT000033_1.fastq.gz --R2 ../course_files/PT000033_2.fastq.gz --ram 2 --force
 </pre>
 
 <p>The command above specifies: the number of CPU cores to be used, one in this case due to limitations in the computing system (usually with a quad-core computer you can specify 8 CPUs); an output directory containing the output files (using the --outdir option); the reference (--ref) genbank file of the reference and your reads.</p>

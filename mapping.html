@@ -455,7 +455,9 @@ $ vcfutils.pl varFilter -d 10 PT000033.raw.vcf > PT000033.filt.vcf
 
 ## Here, we used the vcfutils.pl perl script from BCFtools to filter the raw vcf file with the -d option to set the minimum read depth of 10 to call a variant. Alternatively, a more complex command can perform additional filtering:
 
-$ bcftools view --include 'FMT/GT="1/1" && QUAL>=30 && INFO/DP>=10 && (FMT/AO)/(FMT/DP)>=0.75' PT000033.raw.vcf > PT000033.filt.vcf
+$ bcftools view --include 'FMT/GT="1/1" && QUAL>=30 && INFO/DP>=10 && (INFO/DP4[2]+INFO/DP4[3])/(sum(INFO/DP4))>=0.75' PT000033.raw.vcf > PT000033.filt.vcf
+
+
 
 </pre>
 <p>
