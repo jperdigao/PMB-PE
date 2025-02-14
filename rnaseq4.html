@@ -337,6 +337,10 @@ $ R
 <p>For a Volcano Plot, you can construct a basic one:</p>
 
 <pre>
+> with(res, plot(log2FoldChange, -log10(pvalue), pch=20,main="Volcano plot",xlim=c(-5,5)))
+</pre>
+
+<pre>
 > with(subset(res,padj<.01),points(log2FoldChange, -log10(pvalue),pch=20,col="blue"))
 > with(subset(res,padj<.01 & abs(log2FoldChange)>2),points(log2FoldChange, -log10(pvalue),pch=20,col="red")) 
 </pre>
